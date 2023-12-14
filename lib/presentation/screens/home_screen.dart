@@ -18,12 +18,12 @@ class HomeScreen extends StatelessWidget {
     {
       "icon": FlutterIslamicIcons.quran,
       "text": "القبله",
-      "routeName": Routes.readingListScreenRoute,
+      "routeName": Routes.qiblaScreenRoute,
     },
     {
       "icon": FlutterIslamicIcons.quran,
       "text": "اذكار",
-      "routeName": Routes.readingListScreenRoute,
+      "routeName": Routes.azkarScreenRoute,
     },
   ];
   @override
@@ -41,19 +41,19 @@ class HomeScreen extends StatelessWidget {
           ),
           itemCount: myList.length,
           itemBuilder: (context, index) {
-            return buildGridItem(index,context);
+            return buildGridItem(index, context);
           },
         ),
       ),
     ));
   }
 
-  Widget buildGridItem(int index,context) {
+  Widget buildGridItem(int index, context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: InkWell(
         onTap: () {
-          Navigator.pushNamed(context,myList[index]['routeName']);
+          Navigator.pushNamed(context, myList[index]['routeName']);
         },
         child: Container(
           decoration: BoxDecoration(
